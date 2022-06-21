@@ -1,0 +1,73 @@
+<head>    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="countdown.js"></script>
+    <title>Emmie & Sean</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Emmie & Sean Gorman</h1>
+        <h2>May 13, 2023</h2>
+        <p id="countdown">Calculating countdown...</p>
+    </div>
+    <div class="nav-bar">
+        <div class="nav-element" onclick="show('intro')">
+            <p>Welcome</p>
+        </div>
+        <div class="nav-element" onclick="show('rsvp')">
+            <p>RSVP</p>
+        </div>
+        <div class="nav-element" onclick="show('travel')">
+            <p>Travel</p>
+        </div>
+        <div class="nav-element" onclick="show('lodging')">
+            <p>Lodging</p>
+        </div>
+        <div class="nav-element" onclick="show('toDo')">
+            <p>Things to Do</p>
+        </div>
+        <div class="nav-element unavailable" onclick="show('schedule')">
+            <p>Schedule</p>
+        </div>
+        <div class="nav-element unavailable" onclick="show('photos')">
+            <p>Photos</p>
+        </div>
+    </div>
+    <div class="content visible" id="intro">
+        <!-- <p>Heres the pretty image with content</p> -->
+        <img src="images/cover-trio.JPG"/>
+    </div>
+    <div class="content hidden" id="rsvp">
+        <p>Here is the form that you will RSVP in!!!!!</p>
+    </div>
+    <div class="content hidden" id="travel">
+        <p>Wow you'll probably fly a plane</p>
+    </div>
+    <div class="content hidden" id="lodging">
+        <p>A hotel would also be a pretty good idea</p>
+    </div>
+    <div class="content hidden" id="toDo">
+        <p>Wow this place is so cool</p>
+    </div>
+    <div class="content hidden" id="schedule">
+        <p>Coming soon!</p>
+    </div>
+    <div class="content hidden" id="photos">
+        <p>Coming soon!</p>
+    </div>
+<!-- Wedding Details
+RSVP
+Travel
+Lodging
+Things to Do
+Schedule
+Photos -->
+</body>
+
+<!-- 
+    TODO:
+    fun things with the title of the page
+    drawing babys breath flowers into the corner
+ -->

@@ -1,0 +1,96 @@
+.visible {
+    /* display:block; */
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+  }
+
+.hidden {
+    /* display:none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.2s, opacity 0.2s linear;
+  }
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+}
+/* .header h1 {
+
+} */
+* {
+    transition: all .1s ease-in-out;
+    /* transition: all .2s ease-in-out; */
+}
+body {
+    background-color:rgb(255, 240, 240);
+}
+
+.nav-element {
+    /* background-color: grey; */
+    padding:0 10 0 10;
+    margin: 0 10 0 10;
+    cursor:pointer;
+    text-decoration: underline;
+    text-shadow:0px 0px 0px black;
+    /* border-radius: 10px 10px 0px 0px; */
+    /* border-bottom: 10px; */
+}
+
+.nav-element:hover {
+    text-decoration:none;
+    /* font-weight: 500; */
+    text-shadow:0px 0px 1px black;
+}
+
+.unavailable {
+    text-decoration:line-through;
+}
+
+.nav-bar {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content {
+    /* display:none; */
+    padding:2em;
+    position: absolute;
+    width:100%;
+}
+
+#intro {
+    /* height:100%; */
+    /* background-color:rgb(169, 189, 169); */
+    /* background-image:url(images/cover-trio.JPG);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed; */
+
+    /* display:block; */
+    /* border-bottom-width: 0px;
+    padding-bottom: 2px; */
+}
+
+#intro img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%
+    /* width: 50%; */
+}
+
+#other {
+    background-color:rgb(198, 154, 210);
+}
+#extra {
+    background-color:rgb(154, 165, 210);
+}
+
