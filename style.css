@@ -66,7 +66,7 @@ body {
     width:100%;
 }
 
-#intro {
+/* #intro {
     /* height:100%; */
     /* background-color:rgb(169, 189, 169); */
     /* background-image:url(images/cover-trio.JPG);
@@ -76,8 +76,8 @@ body {
 
     /* display:block; */
     /* border-bottom-width: 0px;
-    padding-bottom: 2px; */
-}
+    padding-bottom: 2px; 
+} */
 
 #intro img {
     display: block;
