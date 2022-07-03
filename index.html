@@ -1,6 +1,9 @@
+<!DOCTYPE html>
+<html>
 <head>    
+    <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/> -->
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="countdown.js"></script>
     <title>Emmie & Sean</title>
@@ -41,6 +44,37 @@
     </div>
     <div class="content hidden" id="rsvp">
         <p>Here is the form that you will RSVP in!!!!!</p>
+        <form class="" id="rsvp-form">
+            <div class="flex">
+                <input type="text" id="name" placeholder="Your First and Last Name" onChange="updateForm();">
+            </div>
+            <div class="flex">
+                <input type="radio" id="yes" name="attendance" value="yes" onChange="updateForm();">
+                <label for="yes">I graciously accept</label>
+                <input type="radio" id="no" name="attendance" value="no" onChange="updateForm();">
+                <label for="no">I regretfully decline</label>
+            </div>
+            <!-- <br> -->
+            <div class="visible hidden" id="yes-dep">
+                <!-- <label for="guests">Guest count:</label> -->
+                <!-- <input type="number" id="guests" name="guests" min="0" max="10" value="0" onChange="updateForm();"> -->
+                <p id="guests">Guest count: </p>
+                <div class="flex" id="meals">
+                    <label for="mealA">Meal A:</label>
+                    <input type="number" id="mealA" name="mealA" min="0" max="10" value="0" onChange="updateForm();">
+                    <label for="mealB">Meal B:</label>
+                    <input type="number" id="mealB" name="mealB" min="0" max="10" value="0" onChange="updateForm();">
+                    <label for="mealC">Meal C:</label>
+                    <input type="number" id="mealC" name="mealC" min="0" max="10" value="0" onChange="updateForm();">
+                    <!-- TODO make the number fields be reactive to the number of guests -->
+                    <input type="hidden" id="invID" name="invID" value="">
+                </div>
+            </form>
+        </div>
+        <div class="flex hidden" id="formSubmit">
+            <!-- <input type="submit" value="Submit" onclick="processForm()"> -->
+            <button onclick="processForm()">Submit</button>
+        </div>
     </div>
     <div class="content hidden" id="travel">
         <p>Wow you'll probably fly a plane</p>
@@ -57,17 +91,19 @@
     <div class="content hidden" id="photos">
         <p>Coming soon!</p>
     </div>
-<!-- Wedding Details
-RSVP
-Travel
-Lodging
-Things to Do
-Schedule
-Photos -->
-</body>
-
-<!-- 
-    TODO:
-    fun things with the title of the page
-    drawing babys breath flowers into the corner
- -->
+    <!-- Wedding Details
+        RSVP
+        Travel
+        Lodging
+        Things to Do
+        Schedule
+        Photos -->
+    </body>
+    
+    <!-- 
+        TODO:
+        fun things with the title of the page
+        drawing babys breath flowers into the corner
+    -->
+    <script type="text/javascript" src="init.js"></script>
+</html>

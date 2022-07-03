@@ -50,15 +50,53 @@ function show (elements) {
     }
 }
 
-$(window).scroll(function(e){ 
-    var $el = $('.fixedElement'); 
-    var isPositionFixed = ($el.css('position') == 'fixed');
-    if ($(this).scrollTop() > 200 && !isPositionFixed){ 
-      $el.css({'position': 'fixed', 'top': '0px'}); 
-    }
-    if ($(this).scrollTop() < 200 && isPositionFixed){
-      $el.css({'position': 'static', 'top': '0px'}); 
-    } 
-  });
+// $(window).scroll(function(e){ 
+//     var $el = $('.fixedElement'); 
+//     var isPositionFixed = ($el.css('position') == 'fixed');
+//     if ($(this).scrollTop() > 200 && !isPositionFixed){ 
+//       $el.css({'position': 'fixed', 'top': '0px'}); 
+//     }
+//     if ($(this).scrollTop() < 200 && isPositionFixed){
+//       $el.css({'position': 'static', 'top': '0px'}); 
+//     } 
+// });
 
-show("intro")
+function updateForm() {
+    formElts = document.querySelectorAll("#rsvp-form")[0];
+
+    if (document.querySelector("input#yes:checked") && formElts[0].value != "") {
+        // TODO: make the form update with every keystroke so they dont have to tap out
+        document.querySelector("#yes-dep").classList.remove("hidden");
+        document.querySelector("#formSubmit").classList.remove("hidden");
+    } else if (document.querySelector("input#no:checked") && formElts[0].value != "") {
+        document.querySelector("#yes-dep").classList.add("hidden");
+        document.querySelector("#formSubmit").classList.remove("hidden");
+    } 
+    var guests = parseInt(document.querySelector("input#mealA").value) +
+    parseInt(document.querySelector("input#mealB").value) +
+    parseInt(document.querySelector("input#mealC").value);
+    
+    document.getElementById("guests").innerHTML = "Guest count: " + guests;
+    // console.log(formElts[0])
+}
+
+function processForm() {
+    formElts = document.querySelectorAll("#rsvp-form")[0];
+    var data = {
+        'name': formElts[0].value,
+        'attendance': yesNo(document.querySelector("input#yes:checked")),
+        'mealA': parseInt(formElts[3].value),
+        'mealB': parseInt(formElts[4].value),
+        'mealC': parseInt(formElts[5].value)
+    };
+    data['guest-count'] = data['mealA'] + data['mealB'] + data['mealC']
+    console.log(data);
+}
+
+function yesNo(yes) {
+    if (yes) {
+        return true;
+    } else {
+        return false;
+    }
+}
