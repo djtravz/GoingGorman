@@ -1,17 +1,17 @@
 @font-face {
     font-family: 'icomoon';
-    src: url("/fonts/icomoon.ttf");
+    src: url("fonts/icomoon.ttf");
     font-weight: normal;
     font-style: normal;
-  }
-  @font-face {
+}
+@font-face {
     font-family: 'brotherhood';
-    src: url("/fonts/Brotherhood_Script.ttf");
-  }
-  @font-face {
-      font-family: 'garamond';
-      src: url("/fonts/EBGaramond-Regular.ttf") format("opentype");
-  }
+    src: url("fonts/Brotherhood_Script.ttf");
+}
+@font-face {
+    font-family: 'garamond';
+    src: url("fonts/EBGaramond-Regular.ttf") format("opentype");
+}
 
 * {
     --accent: #977592;
