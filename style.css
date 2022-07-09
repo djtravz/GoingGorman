@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url("/fonts/icomoon.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'brotherhood';
+    src: url("/fonts/Brotherhood_Script.ttf");
+  }
+  @font-face {
+      font-family: 'garamond';
+      src: url("/fonts/EBGaramond-Regular.ttf") format("opentype");
+  }
+
+* {
+    --accent: #977592;
+    --text: #000;
+    --weak-text: #666;
+}
+
+#countdown {
+    color:var(--weak-text)
+}
+
 .visible {
     /* display:block; */
     visibility: visible;
@@ -18,17 +43,22 @@
   }
 
 h1 {
-    font-size:2em;
+    font-size:4em;
     font-weight:bold;
     padding-top:1.5em;
+    font-family:'brotherhood';
+    color:var(--accent);
+    /* text-shadow:#000; */
 }
 h2 {
     font-size:1.5em;
+    font-family: 'garamond';
 }
 
 p {
     font-size: 20px;
     text-align: center;
+    font-family: 'garamond';
 }
 
 .header {
@@ -70,6 +100,7 @@ body {
 
 .unavailable {
     text-decoration:line-through;
+    color: var(--weak-text)
 }
 
 .nav-bar {
