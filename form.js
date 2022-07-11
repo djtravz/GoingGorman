@@ -1,4 +1,4 @@
-
+// hide("rsvp")
 function updateForm() {
     formElts = document.querySelectorAll("#rsvp-form")[0];
 
