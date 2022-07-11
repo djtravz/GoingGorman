@@ -40,6 +40,7 @@
   .flex {
     display:flex;
     justify-content: center;
+    flex-wrap:wrap;
   }
 
 h1 {
@@ -174,4 +175,13 @@ input[type=radio] {
 label {
     padding-right:0.2em;
     padding-left:0.5em;
+}
+
+
+
+#gallery img {
+    padding: 1em 1em 1em 1em;
+    size:initial;
+    width:15em;
+    height:fit-content;
 }
