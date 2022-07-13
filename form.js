@@ -26,7 +26,8 @@ function processForm() {
         'attendance': yesNo(document.querySelector("input#yes:checked")),
         'mealA': parseInt(formElts[3].value),
         'mealB': parseInt(formElts[4].value),
-        'mealC': parseInt(formElts[5].value)
+        'mealC': parseInt(formElts[5].value),
+        'type': formElts[6].value
     };
     data['guest-count'] = data['mealA'] + data['mealB'] + data['mealC']
     console.log(data);
@@ -46,3 +47,15 @@ function yesNo(yes) {
         return false;
     }
 }
+
+function init() {
+    const urlParams = new URLSearchParams(window.location.search);
+    specialType = urlParams.get("rsvp-type");
+    document.querySelector("input#invID").value = specialType;
+
+    if (specialType) {
+        document.querySelector(`#${specialType}`).classList.remove("hidden");
+    }
+}
+
+init()

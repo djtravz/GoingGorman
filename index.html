@@ -7,6 +7,19 @@
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="countdown.js"></script>
     <script type="module" src="photos.js"></script>
+
+    <link rel="icon" href="images/favicon.png" >
+
+    <meta name="description" content="Emmie and Sean Gorman's Online Wedding Invitation" />
+    <meta property="og:title" content="Going Gorman"/>
+	<meta property="og:image" content="images/banner-splash.png"/>
+	<meta property="og:site_name" content="Going Gorman"/>
+	<meta property="og:description" content="Emmie and Sean Gorman's Online Wedding Invitation"/>
+	<meta name="twitter:card" content="summary_large_image" />	
+	<meta name="twitter:title" content="Happily Ever Heinigs" />
+	<meta name="twitter:image" content="images/banner-splash.png" />
+	<!-- <meta property="og:url" content="https://happilyeverheinigs.github.io/"/>
+	<meta name="twitter:url" content="https://happilyeverheinigs.github.io/" /> -->
     
     <!-- <script type="text/javascript" src="modules/firebase-app.js"></script>
     <script type="text/javascript" src="modules/firebase-storage.js"></script> -->
@@ -44,12 +57,16 @@
             <p>Photos</p>
         </div>
     </div>
-    <div class="content visible" id="intro">
+    <div class="content hidden" id="intro">
         <!-- <p>Heres the pretty image with content</p> -->
         <!-- <img src="images/cover-trio.JPG"/> -->
     </div>
     <div class="content hidden" id="rsvp">
         <p>Here is the form that you will RSVP in!!!!!</p>
+        <div class="flex hidden" id="formSubmit">
+            <!-- <input type="submit" value="Submit" onclick="processForm()"> -->
+            <button onclick="processForm()">Submit</button>
+        </div>
         <form class="" id="rsvp-form">
             <div class="flex">
                 <input type="text" id="name" placeholder="Your First and Last Name" onChange="updateForm();">
@@ -73,14 +90,12 @@
                     <label for="mealC">Meal C:</label>
                     <input type="number" id="mealC" name="mealC" min="0" max="10" value="0" onChange="updateForm();">
                     <!-- TODO make the number fields be reactive to the number of guests -->
-                    <input type="hidden" id="invID" name="invID" value="">
                 </div>
-            </form>
-        </div>
-        <div class="flex hidden" id="formSubmit">
-            <!-- <input type="submit" value="Submit" onclick="processForm()"> -->
-            <button onclick="processForm()">Submit</button>
-        </div>
+            </div>
+            <input type="hidden" id="invID" name="invID" value="">
+            <!-- <div class="hidden" id="formSubmit"><p>hello!!</p></div> -->
+            <div class="hidden" id="shower"><p>HELLO!!</p></div>
+        </form>
     </div>
     <div class="content hidden" id="travel">
         <p>Wow you'll probably fly a plane</p>
