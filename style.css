@@ -80,6 +80,10 @@ body {
     line-height:1.5;
 }
 
+/******************* 
+NAVIGATION BAR
+********************/
+
 .nav-element {
     /* background-color: grey; */
     padding:0px 10px 0px 10px;
@@ -113,6 +117,10 @@ body {
     padding: 0.5em;
 }
 
+/******************* 
+MAIN SITE STRUCT.
+********************/
+
 .content {
     /* display:none; */
     padding:2em;
@@ -122,6 +130,10 @@ body {
     margin-right:1%;
     box-sizing: border-box;
 }
+
+/******************* 
+INTRO
+********************/
 
 #intro {
     height:100%;
@@ -147,12 +159,21 @@ body {
     /* width: 50%; */
 }
 
+/******************* 
+GARBAGE
+********************/
+
 #other {
     background-color:rgb(198, 154, 210);
 }
 #extra {
     background-color:rgb(154, 165, 210);
 }
+
+
+/******************* 
+RSVP FORM 
+********************/
 
 #rsvp-form .flex {
     padding-top:0.5em;
@@ -164,20 +185,80 @@ body {
 #formSubmit {
     margin-top:1em;
 }
+input {
+    font-family:'garamond'
+}
+
+input[type=text] {
+    padding: 0.5em;
+}
+input[type=text],input[type=text] {
+    /* width:fit-content; */
+    /* width:auto */
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    border-bottom: 4px solid #b775ad;
+    /* transition: width 1s linear; */
+}
+input[type=text]:focus,input[type=number]:focus {
+    border: none;
+    border-bottom: 4px solid #e2aeda;
+    /* width:15%; */
+}
+
 
 input[type=number] {
     width:2em;
     /* padding-left:1em; */
 }
+
 input[type=radio] {
     margin-left:2em;
 }
+input[type=radio]:checked {
+    /* margin-left:2em; */
+    background-color:rgb(0, 255, 55);
+}
+
 label {
     padding-right:0.2em;
     padding-left:0.5em;
 }
 
+/******************* 
+LODGING INFO
+********************/
 
+.infobox h1 {
+    font-weight:600;
+    padding-top:0;
+    color: #eab2e1;
+    font-size:3em;
+}
+#lodging .centered {
+    width:50%;
+    margin:auto;
+}
+div.infobox {
+    text-align:center;
+    padding:1.2em;
+    margin:0.5em;
+    box-shadow: inset 0 0 0 1000px rgba(57, 64, 57, 0.39);
+    /* background-color: rgba(203, 210, 203, 0.589); */
+    border-radius:10px;
+    width:30%;
+    background-size:cover;
+    color:white;
+}
+#lodging ul {
+    list-style-type:disc;
+    list-style-position:inside;
+}
+
+/******************* 
+IMAGE GALLERY 
+********************/
 
 #gallery img {
     padding: 1em 1em 1em 1em;
