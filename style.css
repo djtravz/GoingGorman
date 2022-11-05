@@ -240,6 +240,18 @@ LODGING INFO
     width:50%;
     margin:auto;
 }
+
+.infobox h2 {
+    font-size:1.2em;
+}
+a:visited {
+    color:white;
+}
+a:hover {
+    text-decoration:none;
+    
+}
+
 div.infobox {
     text-align:center;
     padding:1.2em;
