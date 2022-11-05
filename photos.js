@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase
 import { getStorage, ref, getDownloadURL, listAll } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-storage.js";
 // import storage from "firebase/storage";
 
-// TODO: Replace the following with your app's Firebase project configuration
+// Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
 const firebaseConfig = {
   // ...
