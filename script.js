@@ -24,7 +24,7 @@ function hide (elements) {
 }
 function show (elements) {
     if (typeof elements == 'string') {
-        elements = document.querySelectorAll("#" + elements)
+        elements = document.querySelectorAll("#" + elements+"-d")
     }
     hide(document.querySelectorAll('.content'))
     // hide(document.querySelectorAll('.nav-element'))

@@ -135,7 +135,7 @@ MAIN SITE STRUCT.
 INTRO
 ********************/
 
-#intro {
+#intro-d {
     height:100%;
     /* background-color:rgb(169, 189, 169); */
     background-image:url(images/cover-trio.JPG);
@@ -151,7 +151,7 @@ INTRO
     box-sizing: border-box;
 }
 
-#intro img {
+#intro-d img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -236,7 +236,7 @@ LODGING INFO
     color: #eab2e1;
     font-size:3em;
 }
-#lodging .centered {
+#lodging-d .centered {
     width:50%;
     margin:auto;
 }
@@ -263,7 +263,7 @@ div.infobox {
     background-size:cover;
     color:white;
 }
-#lodging ul {
+#lodging-d ul {
     list-style-type:disc;
     list-style-position:inside;
 }
@@ -272,7 +272,7 @@ div.infobox {
 IMAGE GALLERY 
 ********************/
 
-#gallery img {
+#gallery-d img {
     padding: 1em 1em 1em 1em;
     size:initial;
     width:15em;
