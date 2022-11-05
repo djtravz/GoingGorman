@@ -36,6 +36,7 @@ function processForm() {
     xhr.open("POST", 'https://goinggorman-2a758-default-rtdb.firebaseio.com/rsvp.json', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify(data));
+    //TODO send form info via telegram bot as well
     // const db = getDatabase();
     // set(ref(db, 'rsvp/'), data);
 }
