@@ -12,7 +12,7 @@ function hide (elements) {
         // }
         //   elements.style.display = 'none';
         try {
-            elements[index].classList.remove("visible")
+            elements[index].classList.remove("visible");
         } catch (error) {}
         // elements[index].classList.remove("visible");
         try {
@@ -24,9 +24,14 @@ function hide (elements) {
 }
 function show (elements) {
     if (typeof elements == 'string') {
-        elements = document.querySelectorAll("#" + elements+"-d")
+        temp = elements;
+        a = document.querySelectorAll("#" + temp+"-d");
+        b = document.querySelectorAll("#" + temp+"-n");
+        elements = [a[0],b[0]];
     }
-    hide(document.querySelectorAll('.content'))
+    hide(document.querySelectorAll('.content'));
+    hide(document.querySelectorAll('.nav-element'));
+    console.log("helper");
     // hide(document.querySelectorAll('.nav-element'))
     elements = elements.length ? elements : [elements];
     for (var index = 0; index < elements.length; index++) {
@@ -40,7 +45,7 @@ function show (elements) {
         // }
         // elements[index].style.display = 'block';
         try {
-            elements[index].classList.remove("hidden")
+            elements[index].classList.remove("hidden");
         } catch (error) {}
         try {
             elements[index].classList.add("visible");

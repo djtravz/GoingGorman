@@ -1,6 +1,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
 import { getStorage, ref, getDownloadURL, listAll } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-storage.js";
-// import storage from "firebase/storage";
+// try {
+document.getElementById("error").remove(); //remove error if it didnt error out
+// } catch (error) {
+//   document.getElementById("gallery").append("<p>Error loading images.</p>");
+// }
+// window.alert("past")
+
+  // import storage from "firebase/storage";
 
 // Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object

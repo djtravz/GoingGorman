@@ -55,25 +55,25 @@
         <p id="countdown">Calculating countdown...</p>
     </div>
     <div class="nav-bar">
-        <div class="nav-element" onclick="show('intro')">
+        <div id="intro-n" class="nav-element hidden" onclick="show('intro')">
             <p>Welcome</p>
         </div>
-        <div class="nav-element" onclick="show('rsvp')">
+        <div id="rsvp-n" class="nav-element hidden" onclick="show('rsvp')">
             <p>RSVP</p>
         </div>
-        <div class="nav-element" onclick="show('travel')">
+        <div id="travel-n" class="nav-element hidden" onclick="show('travel')">
             <p>Travel</p>
         </div>
-        <div class="nav-element" onclick="show('lodging')">
+        <div id="lodging-n" class="nav-element hidden" onclick="show('lodging')">
             <p>Lodging</p>
         </div>
-        <div class="nav-element" onclick="show('toDo')">
+        <div id="toDo-n" class="nav-element hidden" onclick="show('toDo')">
             <p>Things to Do</p>
         </div>
-        <div class="nav-element" onclick="show('schedule')">
+        <div id="schedule-n" class="nav-element hidden" onclick="show('schedule')">
             <p>Schedule</p>
         </div>
-        <div class="nav-element" onclick="show('photos')">
+        <div id="photos-n" class="nav-element hidden" onclick="show('photos')">
             <p>Photos</p>
         </div>
     </div>
@@ -83,7 +83,7 @@
         <!-- <img src="images/cover-trio.JPG"/> -->
     </div>
     <div class="content hidden" id="rsvp-d">
-        <p>Here is the form that you will RSVP in!!!!!</p>
+        <!-- <p>Here is the form that you will RSVP in!!!!!</p> -->
         <div class="flex hidden" id="formSubmit">
             <!-- <input type="submit" value="Submit" onclick="processForm()"> -->
             <button onclick="processForm()">Submit</button>
@@ -115,49 +115,81 @@
             </div>
             <input type="hidden" id="invID" name="invID" value="">
             <!-- <div class="hidden" id="formSubmit"><p>hello!!</p></div> -->
-            <div class="hidden" id="shower-d"><p>HELLO!!</p></div>
+            <!-- <div class="hidden" id="shower-d"><p>HELLO!!</p></div> -->
         </form>
     </div>
     <div class="content hidden" id="travel-d">
-        <p>Wow you'll probably fly a plane</p>
+        <p>Coming soon...</p>
     </div>
     <div class="content hidden" id="lodging-d">
         <!-- <p>A hotel would also be a pretty good idea</p> -->
         <div class="flex">
             <div class="infobox" style="background-image:url(images/hilton.jpg)">
                 <h1>Hilton Garden Inn</h1>
-                <h2>635 River Road, Gatlinburg, TN 37738</h2>
+                <h2><a class="nolink" href="linktogoogle" target="_blank">635 River Road, Gatlinburg, TN 37738</a></h2>
                 <!-- <p></p>  -->
                 <ul>
                     <li>In town</li>
                     <li>Dog friendly</li>
                 </ul>
+                <p><a target="_blank" href="">Click here to reserve your room &#8599;</a></p>
             </div>
             <div class="infobox" style="background-image:url(images/appy-lodge.jpg)">
                 <h1>Appy Lodge</h1>
-                <h2><a target="_blank" href="">Click here to reserve your room &#8599;</a></h2>
+                <h2>168 Parkway Gatlinburg, TN 37738</h2>
                 <ul>
                     <li>Rustic style</li>
                     <li>Woodsy</li>
                 </ul>
+                <p>To make a reservation, call the hotel directly at <em><a href="tel:865-430-3659">(865) 430-3659</a></em> and mention the group name <em>“Travers/Gorman
+                    Wedding”</em>.</p>
                 <!-- <p>More information describing the hotel in general</p>  -->
             </div>
         </div>
         <br>
-        <h2 class="centered">Both hotel options have trolly stops for the area and will be stops for the complimentary wedding shuttle provided by Elite Event Services.</h2>
+        <h2 class="centered">Both hotel options offer free breakfast and trolly stops for the area as well as stops for the complimentary wedding shuttle.</h2>
         <!-- we are reserving blocks of rooms @ 2 places for Emmie’s wedding: Hilton garden inn(in town, dog friendly) and Appy Lodge (more rustic, woodsy) both are trolley stops for free trolley and both will be stops for the wedding shuttle by Elite Event Svcs -->
     </div>
     <div class="content hidden" id="toDo-d">
-        <p>Wow this place is so cool</p>
+        <p>Coming soon...</p>
     </div>
     <div class="content hidden" id="schedule-d">
         <!-- <p>Coming soon!</p> -->
-        
+        <div class="flex sch-sec">
+            <div class="time">
+                <h2>Saturday 5/13 4pm</h2>
+            </div>
+            <div class="info">
+                <h3>Wedding Ceremony</h3>
+                <p>St. Ignatius Loyola Church<br>Reading, PA</p>
+            </div>
+        </div>
+        <div class="flex sch-sec">
+            <div class="time">
+                <h2>4pm-5pm</h2>
+            </div>
+            <div class="info">
+                <h3>Cocktail Hour</h3>
+                <p>Cameron Estate Inn<br>Mount Joy, PA</p>
+                <span>Complimentary Shuttle from <br>Hampton Inn to Cameron Estate Inn</span>
+            </div>
+        </div>
+        <div class="flex sch-sec">
+            <div class="time">
+                <h2>5pm-9pm</h2>
+            </div>
+            <div class="info">
+                <h3>Seated Dinner</h3>
+                <p>Cameron Estate Inn<br>Mount Joy, PA</p>
+                <span>Complimentary Shuttle from <br>Cameron Estate Inn to Hampton Inn</span>
+            </div>
+        </div>
     </div>
     <div class="content hidden" id="photos-d">
-        <p>Coming soon!</p>
+        <!-- <p>Coming soon!</p> -->
         <!-- <img id="myimg" /> -->
         <div class="flex" id="gallery">
+            <p id="error">Could not load images. Check your internet connection.</p>
             <!-- TODO do we actually want this yet? -->
         </div>
     </div>

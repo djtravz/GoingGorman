@@ -23,25 +23,25 @@
     color:var(--weak-text)
 }
 
-.visible {
+.content.visible {
     /* display:block; */
     visibility: visible;
     opacity: 1;
     transition: opacity 0.2s linear;
   }
 
-.hidden {
+.content.hidden {
     /* display:none; */
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.2s, opacity 0.2s linear;
   }
 
-  .flex {
+.flex {
     display:flex;
     justify-content: center;
     flex-wrap:wrap;
-  }
+}
 
 h1 {
     font-size:4em;
@@ -117,6 +117,23 @@ NAVIGATION BAR
     padding: 0.5em;
 }
 
+.nav-element.hidden {
+    /* display:none; */
+    /* visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.2s, opacity 0.2s linear; */
+    text-decoration:underline;
+}
+.nav-element.visible {
+    /* display:none; */
+    /* visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.2s, opacity 0.2s linear; */
+    text-decoration:none;
+}
+
+/* .nav-selected */
+
 /******************* 
 MAIN SITE STRUCT.
 ********************/
@@ -129,6 +146,19 @@ MAIN SITE STRUCT.
     margin-left:1%;
     margin-right:1%;
     box-sizing: border-box;
+}
+a {
+    color:white;
+}
+
+a:visited {
+    color:white;
+}
+a:hover {
+    text-decoration:none;
+}
+.nolink {
+    text-decoration:none;
 }
 
 /******************* 
@@ -241,22 +271,20 @@ LODGING INFO
     margin:auto;
 }
 
+#lodging-d em {
+    font-weight: 800;
+    /* text-decoration: underline; */
+}
+
 .infobox h2 {
     font-size:1.2em;
-}
-a:visited {
-    color:white;
-}
-a:hover {
-    text-decoration:none;
-    
 }
 
 div.infobox {
     text-align:center;
     padding:1.2em;
     margin:0.5em;
-    box-shadow: inset 0 0 0 1000px rgba(57, 64, 57, 0.39);
+    box-shadow: inset 0 0 0 1000px rgba(57, 64, 57, 0.5);
     /* background-color: rgba(203, 210, 203, 0.589); */
     border-radius:10px;
     width:30%;
@@ -272,9 +300,38 @@ div.infobox {
 IMAGE GALLERY 
 ********************/
 
-#gallery-d img {
+#gallery img {
     padding: 1em 1em 1em 1em;
     size:initial;
     width:15em;
     height:fit-content;
+}
+
+
+/******************* 
+SCHEDULE 
+********************/
+
+#schedule-d {
+    margin-bottom: 0;
+    padding-top: 0.2em;
+    font-size: 2em;
+}
+#schedule-d a{
+    color:rgb(224, 224, 224);
+    text-decoration: underline;
+    /* font-family: 'heinig', 'Brotherhood Script', normal; */
+    font-style: italic;
+    font-weight: bold;
+}
+#schedule-d a:hover{
+    text-decoration:none;
+}
+
+#schedule-d {
+    /* font-size:0.5em; */
+    text-align:center;
+}
+.sch-sec {
+    background-color:rgba(121, 171, 122, 0.6);
 }
