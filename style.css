@@ -5,8 +5,8 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'brotherhood';
-    src: url("fonts/Brotherhood_Script.ttf");
+    font-family: 'satisfy';
+    src: url("fonts/Satisfy-Regular.ttf");
 }
 @font-face {
     font-family: 'garamond';
@@ -45,9 +45,9 @@
 
 h1 {
     font-size:4em;
-    font-weight:bold;
+    font-weight:normal;
     padding-top:1.5em;
-    font-family:'brotherhood';
+    font-family:'satisfy';
     color:var(--accent);
     /* text-shadow:#000; */
 }
