@@ -61,11 +61,11 @@
         <div id="rsvp-n" class="nav-element hidden" onclick="show('rsvp')">
             <p>RSVP</p>
         </div>
-        <div id="travel-n" class="nav-element hidden" onclick="show('travel')">
+        <!-- <div id="travel-n" class="nav-element hidden" onclick="show('travel')">
             <p>Travel</p>
-        </div>
-        <div id="lodging-n" class="nav-element hidden" onclick="show('lodging')">
-            <p>Lodging</p>
+        </div> -->
+        <div id="locations-n" class="nav-element hidden" onclick="show('locations')">
+            <p>Locations</p>
         </div>
         <div id="toDo-n" class="nav-element hidden" onclick="show('toDo')">
             <p>Things to Do</p>
@@ -83,45 +83,35 @@
         <!-- <img src="images/cover-trio.JPG"/> -->
     </div>
     <div class="content hidden" id="rsvp-d">
-        <!--<-- <p>Here is the form that you will RSVP in!!!!!</p> --
+        <!-- <p>Here is the form that you will RSVP in!!!!!</p> -->
         <div class="flex hidden" id="formSubmit">
-            <!-- <input type="submit" value="Submit" onclick="processForm()"> --
-            <button onclick="processForm()">Submit</button>
+            <!-- <input type="submit" value="Submit" onclick="processForm()"> -->
         </div>
         <form class="" id="rsvp-form">
-            <div class="flex">
-                <input type="text" id="name" placeholder="Your First and Last Name" onChange="updateForm();">
-            </div>
-            <div class="flex">
+            <div class="center">
+                <input type="text" id="name" placeholder="Your First and Last Name" onChange="updateForm();"><br><br>
                 <input type="radio" id="yes" name="attendance" value="yes" onChange="updateForm();">
                 <label for="yes">I graciously accept</label>
                 <input type="radio" id="no" name="attendance" value="no" onChange="updateForm();">
-                <label for="no">I regretfully decline</label>
-            </div>
-            <!-- <br> --
-            <div class="visible hidden" id="yes-dep">
-                <!-- <label for="guests">Guest count:</label> --
-                <!-- <input type="number" id="guests" name="guests" min="0" max="10" value="0" onChange="updateForm();"> --
-                <p id="guests">Guest count: </p>
-                <div class="flex" id="meals">
-                    <label for="mealA">Meal A:</label>
-                    <input type="number" id="mealA" name="mealA" min="0" max="10" value="0" onChange="updateForm();">
-                    <label for="mealB">Meal B:</label>
-                    <input type="number" id="mealB" name="mealB" min="0" max="10" value="0" onChange="updateForm();">
-                    <label for="mealC">Meal C:</label>
-                    <input type="number" id="mealC" name="mealC" min="0" max="10" value="0" onChange="updateForm();">
-                    <!-- TODO make the number fields be reactive to the number of guests --
+                <label for="no">I regretfully decline</label><br><br>
+                <div class="visible hidden" id="yes-dep">
+                    <label for="guests">Wedding/reception (Saturday) count:</label>
+                    <input type="text" class="small" id="guests" name="guests" value="0"><br>
+                    <label for="guests">Social hour (Friday) count:</label>
+                    <input type="text" class="small" id="social" name="guests" value="0">
                 </div>
+                <button onclick="processForm()">Submit</button>
             </div>
+            <!-- <br> -->
             <input type="hidden" id="invID" name="invID" value="">
-            <!-- <div class="hidden" id="formSubmit"><p>hello!!</p></div> --
-            <!-- <div class="hidden" id="shower-d"><p>HELLO!!</p></div> --
-        </form>-->
+            <!-- <div class="hidden" id="formSubmit"><p>hello!!</p></div> -->
+            <!-- <div class="hidden" id="shower-d"><p>HELLO!!</p></div> -->
+        </form>
     </div>
-    <div class="content hidden" id="travel-d">
+    <!-- <div class="content hidden" id="travel-d">
         <p>Coming soon...</p>
-    </div>
-    <div class="content hidden" id="lodging-d">
+    </div> -->
+    <div class="content hidden" id="locations-d">
         <div class="flex">
             <div class="infobox" style="background-image:url(images/hilton.jpg)">
                 <h1>Hilton Garden Inn</h1>
@@ -132,7 +122,16 @@
                 </ul>
                 <p><a target="_blank" href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=GATGIGI&groupCode=TGW&arrivaldate=2023-05-12&departuredate=2023-05-14&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT">Click here to reserve your room &#8599;</a></p>
             </div>
-            <div class="infobox" style="background-image:url(images/appy-lodge.jpg)">
+            <div class="infobox" style="background-image:url(images/four-points-farm.jpg)">
+                <h1>Four Points Farm</h1>
+                <h2><a class="nolink" href="https://g.co/kgs/BgJLn3" target="_blank">3692 Old Birds Creek Rd, Sevierville, TN 37876</a></h2>
+                <!-- <ul>
+                    <li>Rustic style</li>
+                    <li>Woodsy</li>
+                </ul> -->
+                <p>The wedding venue.</p>
+            </div>
+            <!-- <div class="infobox" style="background-image:url(images/appy-lodge.jpg)">
                 <h1>Appy Lodge</h1>
                 <h2><a class="nolink" href="https://g.page/theappylodge" target="_blank">168 Parkway Gatlinburg, TN 37738</a></h2>
                 <ul>
@@ -141,10 +140,10 @@
                 </ul>
                 <p>To make a reservation, call the hotel directly at <em><a href="tel:865-430-3659">(865) 430-3659</a></em> and mention the group name <em>“Travers/Gorman
                     Wedding”</em>.</p>
-            </div>
+            </div> -->
         </div>
         <br>
-        <h2 class="centered">Both hotel options offer free breakfast and trolly stops for the area as well as stops for the complimentary wedding shuttle.</h2>
+        <h2 class="centered">A complimentary shuttle will be available to transport guests to the wedding venue at 4:30PM, then back to the hotel at 10PM.</h2>
     </div>
     <div class="content hidden" id="toDo-d">
         <p>Coming soon...</p>
@@ -152,24 +151,34 @@
     <div class="content hidden" id="schedule-d">
         <div class="outer">
             <div class="card">
-              <div class="info" style="background-image:url(images/appy-lodge.jpg);">
-                <h3 class="title">Title 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+              <div class="info">
+                <!-- style="background-image:url(images/appy-lodge.jpg);" -->
+                <h3 class="title">Friday May 12th</h3>
+                <p style="font-style: italic;">(for wedding party only)</p>
+                <p>Wedding Rehearsal - 5PM @ 4 pts</p>
+                <p>Rehearsal Dinner - 6:30PM @ Crystille Creek</p>
+                <p style="font-style: italic;">(for all guests)</p>
+                <p>Social Hour - 9:00PM @ Hilton Garden Inn Bar & Grill</p>
+                <!-- TODO hyperlink that? -->
               </div>
             </div>
             <div class="card">
               <div class="info">
-                <h3 class="title">Title 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                <h3 class="title">Saturday May 13th</h3>
+                <p>Wedding Ceremony - 5PM @ 4 Points Farm</p>
+                <p>Cocktail Hour - 5:30-6:30PM</p>
+                <p>Dinner - 6:30PM</p>
+                <p>Dance Floor - 6:30-10PM</p>
+                <p>After Party @ Devon & Becca's</p>
               </div>
             </div>
             <div class="card">
               <div class="info">
-                <h3 class="title">Title 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                <h3 class="title">Sunday May 14th</h3>
+                <p>Brunch @ Big Buck Lodge</p>
               </div>
             </div>
-            <div class="card">
+            <!-- <div class="card">
               <div class="info">
                 <h3 class="title">Title 4</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -179,7 +188,7 @@
               <div class="info">
                 <h3 class="title">Title 5</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-              </div>
+              </div> -->
             </div>
           </div>
     </div>
@@ -194,7 +203,7 @@
     <!-- Wedding Details
         RSVP
         Travel
-        Lodging
+        Locations
         Things to Do
         Schedule
         Photos -->

@@ -1,0 +1,29 @@
+<form class="" id="rsvp-form">
+    <div class="flex">
+        <input type="text" id="name" placeholder="Your First and Last Name" onChange="updateForm();">
+    </div>
+    <div class="flex">
+        <input type="radio" id="yes" name="attendance" value="yes" onChange="updateForm();">
+        <label for="yes">I graciously accept</label>
+        <input type="radio" id="no" name="attendance" value="no" onChange="updateForm();">
+        <label for="no">I regretfully decline</label>
+    </div>
+    <!-- <br> -->
+    <div class="visible hidden" id="yes-dep">
+        <!-- <label for="guests">Guest count:</label> -->
+        <!-- <input type="number" id="guests" name="guests" min="0" max="10" value="0" onChange="updateForm();"> -->
+        <p id="guests">Guest count: </p>
+        <div class="flex" id="meals">
+            <label for="mealA">Meal A:</label>
+            <input type="number" id="mealA" name="mealA" min="0" max="10" value="0" onChange="updateForm();">
+            <label for="mealB">Meal B:</label>
+            <input type="number" id="mealB" name="mealB" min="0" max="10" value="0" onChange="updateForm();">
+            <label for="mealC">Meal C:</label>
+            <input type="number" id="mealC" name="mealC" min="0" max="10" value="0" onChange="updateForm();">
+            <!-- TODO make the number fields be reactive to the number of guests -->
+        </div>
+    </div>
+    <input type="hidden" id="invID" name="invID" value="">
+    <!-- <div class="hidden" id="formSubmit"><p>hello!!</p></div> -->
+    <!-- <div class="hidden" id="shower-d"><p>HELLO!!</p></div> -->
+</form>
