@@ -67,9 +67,9 @@
         <div id="locations-n" class="nav-element hidden" onclick="show('locations')">
             <p>Locations</p>
         </div>
-        <div id="toDo-n" class="nav-element hidden" onclick="show('toDo')">
+        <!-- <div id="toDo-n" class="nav-element hidden" onclick="show('toDo')">
             <p>Things to Do</p>
-        </div>
+        </div> -->
         <div id="schedule-n" class="nav-element hidden" onclick="show('schedule')">
             <p>Schedule</p>
         </div>
@@ -89,18 +89,22 @@
         </div>
         <form class="" id="rsvp-form">
             <div class="center">
-                <input type="text" id="name" placeholder="Your First and Last Name" onChange="updateForm();"><br><br>
+                <input type="text" id="name" placeholder="Your First and Last Name" onChange="updateForm();" required><br><br>
                 <input type="radio" id="yes" name="attendance" value="yes" onChange="updateForm();">
                 <label for="yes">I graciously accept</label>
                 <input type="radio" id="no" name="attendance" value="no" onChange="updateForm();">
                 <label for="no">I regretfully decline</label><br><br>
                 <div class="visible hidden" id="yes-dep">
+                    <label for="social">Social hour (Friday) count:</label>
+                    <input type="text" class="small" id="social" name="social" value="0"><br>
                     <label for="guests">Wedding/reception (Saturday) count:</label>
-                    <input type="text" class="small" id="guests" name="guests" value="0"><br>
-                    <label for="guests">Social hour (Friday) count:</label>
-                    <input type="text" class="small" id="social" name="guests" value="0">
+                    <input type="text" class="small" id="guests" name="guests" value="0">
+                    <label for="after" class="party"><br>After party (Saturday Night) count: </label>
+                    <input type="text" class="small party" id="after" name="after" value="0">
+                    <label for="brunch" class="party"><br>Brunch (Sunday Morning) count: </label>
+                    <input type="text" class="small party" id="brunch" name="brunch" value="0">
                 </div>
-                <button onclick="processForm()">Submit</button>
+                <input type="button" onclick="processForm()" value="Submit">
             </div>
             <!-- <br> -->
             <input type="hidden" id="invID" name="invID" value="">
@@ -122,8 +126,8 @@
                 </ul>
                 <p><a target="_blank" href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=GATGIGI&groupCode=TGW&arrivaldate=2023-05-12&departuredate=2023-05-14&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT">Click here to reserve your room &#8599;</a></p>
             </div>
-            <div class="infobox" style="background-image:url(images/four-points-farm.jpg)">
-                <h1>Four Points Farm</h1>
+            <div class="infobox" style="background-image:url(images/4-points-farm.jpg)">
+                <h1>4 Points Farm</h1>
                 <h2><a class="nolink" href="https://g.co/kgs/BgJLn3" target="_blank">3692 Old Birds Creek Rd, Sevierville, TN 37876</a></h2>
                 <!-- <ul>
                     <li>Rustic style</li>
@@ -143,7 +147,10 @@
             </div> -->
         </div>
         <br>
-        <h2 class="centered">A complimentary shuttle will be available to transport guests to the wedding venue at 4:30PM, then back to the hotel at 10PM.</h2>
+        <h2 class="centered">A complimentary shuttle will be available to transport guests to the wedding venue at 4:15PM, then back to the hotel at 9:30 and 10:15PM.</h2>
+        <br><br>
+        <h2 class="centered">For things to do in the area, check out <a href="https://www.tripadvisor.com/Trips/111618013" style="color:black;">this Tripadvisor collection</a>.</a></h2>
+
     </div>
     <div class="content hidden" id="toDo-d">
         <p>Coming soon...</p>
@@ -154,10 +161,10 @@
               <div class="info">
                 <!-- style="background-image:url(images/appy-lodge.jpg);" -->
                 <h3 class="title">Friday May 12th</h3>
-                <p style="font-style: italic;">(for wedding party only)</p>
-                <p>Wedding Rehearsal - 5PM @ 4 pts</p>
-                <p>Rehearsal Dinner - 6:30PM @ Crystille Creek</p>
-                <p style="font-style: italic;">(for all guests)</p>
+                <!-- <p style="font-style: italic;">(for wedding party only)</p> -->
+                <p class="party">Wedding Rehearsal - 5PM @ 4 pts</p>
+                <p class="party">Rehearsal Dinner - 6:30PM @ Crystille Creek</p>
+                <!-- <p style="font-style: italic;">(for all guests)</p> -->
                 <p>Social Hour - 9:00PM @ Hilton Garden Inn Bar & Grill</p>
                 <!-- TODO hyperlink that? -->
               </div>
@@ -169,13 +176,14 @@
                 <p>Cocktail Hour - 5:30-6:30PM</p>
                 <p>Dinner - 6:30PM</p>
                 <p>Dance Floor - 6:30-10PM</p>
-                <p>After Party @ Devon & Becca's</p>
+                <p class="party">After Party @ Devon & Becca's</p>
               </div>
             </div>
             <div class="card">
               <div class="info">
                 <h3 class="title">Sunday May 14th</h3>
-                <p>Brunch @ Big Buck Lodge</p>
+                <p class="party">Brunch @ Big Buck Lodge</p>
+                <p>Lunch - 11AM-4PM @ Morning Mist Cafe</p>
               </div>
             </div>
             <!-- <div class="card">

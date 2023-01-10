@@ -31,7 +31,7 @@ function show (elements) {
     }
     hide(document.querySelectorAll('.content'));
     hide(document.querySelectorAll('.nav-element'));
-    console.log("helper");
+    // console.log("helper");
     // hide(document.querySelectorAll('.nav-element'))
     elements = elements.length ? elements : [elements];
     for (var index = 0; index < elements.length; index++) {
