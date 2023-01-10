@@ -4,3 +4,12 @@ if (param) {
 } else {
     show("intro");
 }
+
+if (!window.location.search.startsWith("?party=1")) {
+    let coll = document.getElementsByClassName("party");
+    Array.from(coll).forEach((element) => {
+        element.remove();
+    });
+
+}
+// class="party"

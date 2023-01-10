@@ -10,11 +10,11 @@ function updateForm() {
         document.querySelector("#yes-dep").classList.add("hidden");
         document.querySelector("#formSubmit").classList.remove("hidden");
     } 
-    var guests = parseInt(document.querySelector("input#mealA").value) +
-    parseInt(document.querySelector("input#mealB").value) +
-    parseInt(document.querySelector("input#mealC").value);
+    // var guests = parseInt(document.querySelector("input#mealA").value) +
+    // parseInt(document.querySelector("input#mealB").value) +
+    // parseInt(document.querySelector("input#mealC").value);
     
-    document.getElementById("guests").innerHTML = "Guest count: " + guests;
+    // document.getElementById("guests").innerHTML = "Guest count: " + guests;
     // console.log(formElts[0])
 }
 
@@ -49,14 +49,15 @@ function yesNo(yes) {
     }
 }
 
-function init() {
-    const urlParams = new URLSearchParams(window.location.search);
-    specialType = urlParams.get("rsvp-type");
-    document.querySelector("input#invID").value = specialType;
+// function init() {
+const urlParams = new URLSearchParams(window.location.search);
+specialType = urlParams.get("rsvp-type");
+document.querySelector("input#invID").value = specialType;
 
-    if (specialType) {
-        document.querySelector(`#${specialType}`).classList.remove("hidden");
-    }
+if (specialType) {
+    document.querySelector(`#${specialType}`).classList.remove("hidden");
 }
+// }
 
-init()
+// init()
+// document.querySelector("#rsvp-form").querySelectorAll("input");
