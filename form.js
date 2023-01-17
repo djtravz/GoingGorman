@@ -24,18 +24,19 @@ function processForm() {
     var data = {
         'name': formElts[0].value,
         'attendance': yesNo(document.querySelector("input#yes:checked")),
-        'mealA': parseInt(formElts[3].value),
-        'mealB': parseInt(formElts[4].value),
-        'mealC': parseInt(formElts[5].value),
-        'type': formElts[6].value
+        'countSocial': parseInt(formElts[3].value),
+        'countWedding': parseInt(formElts[4].value),
+        'countAfter': parseInt(formElts[5].value),
+        'countBrunch': formElts[6].value
     };
-    data['guest-count'] = data['mealA'] + data['mealB'] + data['mealC']
+    // data['guest-count'] = data['mealA'] + data['mealB'] + data['mealC']
     console.log(data);
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", 'https://goinggorman-2a758-default-rtdb.firebaseio.com/rsvp.json', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify(data));
+    window.alert("Thank you for RSVPing!")
     //TODO send form info via telegram bot as well
     // const db = getDatabase();
     // set(ref(db, 'rsvp/'), data);
