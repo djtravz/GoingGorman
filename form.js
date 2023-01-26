@@ -44,10 +44,10 @@ function processForm() {
     
     var xhr = new XMLHttpRequest();
     xhr.open("POST", 
-    'https://api.telegram.org/bot'+'5361540387:AAEz8tx58mUi0MeSciQqFptLsDZaBr3hpHE'+'/sendMessage?chat_id=-833735643&text='+JSON.stringify(data)
+    `https://api.telegram.org/bot5361540387:AAEz8tx58mUi0MeSciQqFptLsDZaBr3hpHE/sendMessage?chat_id=-833735643&text=Names: ${data['name']}  |  Coming? ${data['attendance']}  |  Wedding count: ${data['countWedding']}  |  Social Hour: ${data['countSocial']}  |  After party: ${data['countAfter']}  |  Brunch: ${data['countBrunch']}`
     , true);
     xhr.send();
-    
+
     window.alert("Thank you for RSVPing!")
     //TODO send form info via telegram bot as well
     // const db = getDatabase();

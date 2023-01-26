@@ -9,6 +9,10 @@
     src: url("fonts/Satisfy-Regular.ttf");
 }
 @font-face {
+    font-family: 'old';
+    src: url("fonts/Satisfy-Regular.old.ttf");
+}
+@font-face {
     font-family: 'garamond';
     src: url("fonts/EBGaramond-Regular.ttf") format("opentype");
 }
