@@ -112,7 +112,7 @@ NAVIGATION BAR
 
 .unavailable {
     text-decoration:line-through;
-    color: var(--weak-text)
+    color: var(--weak-text);
 }
 
 .nav-bar {
@@ -175,24 +175,24 @@ INTRO
 #intro-d {
     height:100%;
     /* background-color:rgb(169, 189, 169); */
-    background-image:url(images/trio-cover.JPG);
+    /* background-image:url(images/trio-cover.JPG);
     background-size:cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     
     /* display:block; */
-    border-bottom-width: 0px;
-    padding-bottom: 2px; 
+    /* border-bottom-width: 0px;
+    padding-bottom: 2px;  */
     
-    box-shadow: inset 0px 3px 10px 0px rgba(60, 60, 60, 0.60);
-    box-sizing: border-box;
 }
 
 #intro-d img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width:80%
+    width:70%;
+    box-shadow: 0px 3px 10px 0px rgba(60, 60, 60, 0.60);
+    box-sizing: border-box;
     /* width: 50%; */
 }
 
@@ -276,6 +276,7 @@ label {
     padding-right:0.2em;
     padding-left:0.5em;
 }
+
 
 /******************* 
 LOCATION INFO
@@ -489,4 +490,28 @@ SCHEDULE
   /* setting dot to the right if the card is odd */
   .card:nth-child(even) > .info > .title::before {
     right: -45px;
+  }
+
+  .registry {
+    background-color:black;
+    width:fit-content;
+    padding: 5px;
+    margin:auto;
+  }
+
+  @media (max-aspect-ratio: 9/16) {
+    #rsvp-d,.nav-bar,#schedule-d {
+        zoom:2;
+    }
+    #locations-d .centered{
+        width:80%;
+        font-size:2em;
+    }
+    div.infobox {
+        width:70%;
+        font-size:1.5em;
+    }
+    .registry {
+        font-size:1.5em;
+    }
   }

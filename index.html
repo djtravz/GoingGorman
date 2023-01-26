@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="countdown.js"></script>
-    <script type="module" src="photos.js"></script>
+    <!-- <script type="module" src="photos.js"></script> -->
 
     <link rel="icon" href="images/favicon.png" >
 
@@ -50,7 +50,7 @@
 
 <body>
     <div class="header">
-        <h1>Emmie Travers &amp; Sean Gorman</h1>
+        <h1>Emmie Travers &amp;<br> Sean Gorman</h1>
         <h2>May 13, 2023</h2>
         <p id="countdown">Calculating countdown...</p>
     </div>
@@ -73,14 +73,14 @@
         <div id="schedule-n" class="nav-element hidden" onclick="show('schedule')">
             <p>Schedule</p>
         </div>
-        <div id="photos-n" class="nav-element hidden" onclick="show('photos')">
+        <div id="photos-n" class="nav-element unavailable" onclick="show('photos')">
             <p>Photos</p>
         </div>
     </div>
     <div class="content hidden" id="intro-d">
         <!-- Using CSS for background -->
-        <!-- <p>Heres the pretty image with content</p> -->
-        <!-- <img src="images/cover-trio.JPG"/> -->
+        <img src="images/cover-trio.JPG"/><br>
+        <p class="registry"><a class="registry" href="https://www.zola.com/registry/maryellenandsean">Click here to visit the registry.</a></p>
     </div>
     <div class="content hidden" id="rsvp-d">
         <!-- <p>Here is the form that you will RSVP in!!!!!</p> -->
@@ -89,20 +89,20 @@
         </div>
         <form class="" id="rsvp-form">
             <div class="center">
-                <input type="text" id="name" placeholder="Your First and Last Name" onChange="updateForm();" required><br><br>
+                <input type="text" id="name" placeholder="Your Party's Name" onChange="updateForm();" required><br><br>
                 <input type="radio" id="yes" name="attendance" value="yes" onChange="updateForm();">
                 <label for="yes">I graciously accept</label>
                 <input type="radio" id="no" name="attendance" value="no" onChange="updateForm();">
                 <label for="no">I regretfully decline</label><br><br>
                 <div class="visible hidden" id="yes-dep">
                     <label for="social">Social hour (Friday) count:</label>
-                    <input type="text" class="small" id="social" name="social" value="0"><br>
+                    <input type="text" class="small" id="social" name="social" placeholder="0"><br>
                     <label for="guests">Wedding/reception (Saturday) count:</label>
-                    <input type="text" class="small" id="guests" name="guests" value="0">
+                    <input type="text" class="small" id="guests" name="guests" placeholder="0">
                     <label for="after" class="party"><br>After party (Saturday Night) count: </label>
-                    <input type="text" class="small party" id="after" name="after" value="0">
+                    <input type="text" class="small party" id="after" name="after" placeholder="0">
                     <label for="brunch" class="party"><br>Brunch (Sunday Morning) count: </label>
-                    <input type="text" class="small party" id="brunch" name="brunch" value="0">
+                    <input type="text" class="small party" id="brunch" name="brunch" placeholder="0">
                 </div>
                 <input type="button" onclick="processForm()" value="Submit">
             </div>
@@ -126,15 +126,6 @@
                 </ul>
                 <p><a target="_blank" href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=GATGIGI&groupCode=TGW&arrivaldate=2023-05-12&departuredate=2023-05-14&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT">Click here to reserve your room &#8599;</a></p>
             </div>
-            <div class="infobox" style="background-image:url(images/4-points-farm.jpg)">
-                <h1>4 Points Farm</h1>
-                <h2><a class="nolink" href="https://g.co/kgs/BgJLn3" target="_blank">3692 Old Birds Creek Rd, Sevierville, TN 37876</a></h2>
-                <!-- <ul>
-                    <li>Rustic style</li>
-                    <li>Woodsy</li>
-                </ul> -->
-                <p>The wedding venue.</p>
-            </div>
             <!-- <div class="infobox" style="background-image:url(images/appy-lodge.jpg)">
                 <h1>Appy Lodge</h1>
                 <h2><a class="nolink" href="https://g.page/theappylodge" target="_blank">168 Parkway Gatlinburg, TN 37738</a></h2>
@@ -144,13 +135,25 @@
                 </ul>
                 <p>To make a reservation, call the hotel directly at <em><a href="tel:865-430-3659">(865) 430-3659</a></em> and mention the group name <em>“Travers/Gorman
                     Wedding”</em>.</p>
-            </div> -->
+                </div> -->
+            </div>
+            <br>
+            <h2 class="centered">A complimentary shuttle will be available to transport guests to the wedding venue at 4:15PM, then back to the hotel at 9:30 and 10:15PM.</h2>
+            <br><br>
+            <h2 class="centered">For things to do in the area, check out <a href="https://www.tripadvisor.com/Trips/111618013" style="color:black;">this Tripadvisor collection</a>.</a></h2>
+            <br><br>
+            <div class="flex">
+            <div class="infobox" style="background-image:url(images/4-points-farm.jpg)">
+                <h1>4 Points Farm</h1>
+                <h2><a class="nolink" href="https://g.co/kgs/BgJLn3" target="_blank">3692 Old Birds Creek Rd, Sevierville, TN 37876</a></h2>
+                <!-- <ul>
+                    <li>Rustic style</li>
+                    <li>Woodsy</li>
+                </ul> -->
+                <p>The wedding venue.</p>
+            </div>
         </div>
-        <br>
-        <h2 class="centered">A complimentary shuttle will be available to transport guests to the wedding venue at 4:15PM, then back to the hotel at 9:30 and 10:15PM.</h2>
-        <br><br>
-        <h2 class="centered">For things to do in the area, check out <a href="https://www.tripadvisor.com/Trips/111618013" style="color:black;">this Tripadvisor collection</a>.</a></h2>
-
+            
     </div>
     <div class="content hidden" id="toDo-d">
         <p>Coming soon...</p>
@@ -205,7 +208,7 @@
         <!-- <p>Coming soon!</p> -->
         <!-- <img id="myimg" /> -->
         <div class="flex" id="gallery">
-            <p id="error">Could not load images. Check your internet connection.</p>
+            <p id="error">View the photos after the wedding here.</p>
             <!-- TODO do we actually want this yet? -->
         </div>
     </div>
