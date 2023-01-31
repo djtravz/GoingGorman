@@ -44,7 +44,7 @@ function processForm() {
     
     var xhr = new XMLHttpRequest();
     xhr.open("POST", 
-    `https://api.telegram.org/bot5361540387:AAEz8tx58mUi0MeSciQqFptLsDZaBr3hpHE/sendMessage?chat_id=-833735643&text=Names: ${data['name']}  |  Coming? ${data['attendance']}  |  Wedding count: ${data['countWedding']}  |  Social Hour: ${data['countSocial']}  |  After party: ${data['countAfter']}  |  Brunch: ${data['countBrunch']}`
+    `https://api.telegram.org/bot5361540387:AAEz8tx58mUi0MeSciQqFptLsDZaBr3hpHE/sendMessage?chat_id=-833735643&text=Names: ${data['name']}  |  Coming? ${data['attendance']}  |  Wedding count: ${data['countWedding']}  |  Social Hour: ${data['countSocial']}  |  After party: ${data['countAfter']}`
     , true);
     xhr.send();
 

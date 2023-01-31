@@ -90,7 +90,6 @@
         </div>
         <form class="" id="rsvp-form">
             <div class="center">
-                <input type="text" id="name" placeholder="Your Party's Name" onChange="updateForm();" required><br><br>
                 <input type="radio" id="yes" name="attendance" value="yes" onChange="updateForm();">
                 <label for="yes">I graciously accept</label>
                 <input type="radio" id="no" name="attendance" value="no" onChange="updateForm();">
@@ -101,10 +100,12 @@
                     <label for="guests">Wedding/reception (Saturday) count:</label>
                     <input type="text" class="small" id="guests" name="guests" placeholder="0">
                     <label for="after" class="party"><br>After party (Saturday Night) count: </label>
-                    <input type="text" class="small party" id="after" name="after" placeholder="0">
-                    <label for="brunch" class="party"><br>Brunch (Sunday Morning) count: </label>
-                    <input type="text" class="small party" id="brunch" name="brunch" placeholder="0">
-                </div>
+                    <input type="text" class="small party" id="after" name="after" placeholder="0"><br><br>
+                    <label for="after" class="party"><br>After party (Saturday Night) count: </label>
+                    <!-- <label for="brunch" class="party"><br>Brunch (Sunday Morning) count: </label>
+                        <input type="text" class="small party" id="brunch" name="brunch" placeholder="0"> -->
+                    </div>
+                <textarea id="name" rows="2" cols="20" placeholder="All names of your party" onChange="updateForm();" required></textarea><br><br>
                 <input type="button" onclick="processForm()" value="Submit">
             </div>
             <!-- <br> -->
@@ -187,7 +188,7 @@
               <div class="info">
                 <h3 class="title">Sunday May 14th</h3>
                 <!-- <p class="party">Brunch @ Big Buck Lodge</p> -->
-                <p class="party">Lunch - 11AM-4PM @ Morning Mist Cafe</p>
+                <!-- <p class="party">Lunch - 11AM-4PM @ Morning Mist Cafe</p> -->
                 <p>Have a safe trip home!</p>
               </div>
             </div>

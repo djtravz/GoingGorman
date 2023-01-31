@@ -59,7 +59,7 @@ h1 {
     font-weight:normal;
     padding-top:1.5em;
     font-family:'satisfy';
-    color:var(--accent);
+    color:black;
     /* text-shadow:#000; */
 }
 h2 {
@@ -220,13 +220,13 @@ RSVP FORM
     padding-top:0.5em;
     padding-bottom:0.5em;
 }
-#rsvp-form input {
+#rsvp-form input,textarea {
     text-align:center;
 }
-#formSubmit {
+/* #formSubmit {
     margin-top:1em;
-}
-input {
+} */
+input,textarea {
     font-family:'garamond'
 }
 .center {
@@ -238,11 +238,11 @@ input {
     text-align: center;
 }
 
-input[type=text] {
+input[type=text],textarea {
     padding: 0.5em;
     font-size: 1em;
 }
-input[type=text],input[type=text] {
+input[type=text],textarea {
     /* width:fit-content; */
     /* width:auto */
     border-radius: 5px;
@@ -316,6 +316,9 @@ div.infobox {
     width:30%;
     background-size:cover;
     background-position:center;
+    color:white;
+}
+.infobox h1 {
     color:white;
 }
 #locations-d ul {
