@@ -21,19 +21,30 @@ function updateForm() {
 function processForm() {
     // import { getDatabase, ref, set } from "firebase/database";
     formElts = document.querySelectorAll("#rsvp-form")[0];
+    nameg = document.querySelector("#name");
+    social = document.querySelector("#social");
+    guests = document.querySelector("#guests");
+    try {
+    after = document.querySelector("#after");
+    } catch {}
     var data = {
-        'name': formElts[0].value,
+        'name': nameg.value,
         'attendance': yesNo(document.querySelector("input#yes:checked")),
-        'countSocial': parseInt(formElts[3].value),
-        'countWedding': parseInt(formElts[4].value),
-        'countAfter': parseInt(formElts[5].value),
-        'countBrunch': parseInt(formElts[6].value)
+        'countSocial': parseInt(social.value),
+        'countWedding': parseInt(guests.value)
+        // 'countBrunch': parseInt(formElts[6].value)
     };
+    if (after){
+        data['countAfter'] = parseInt(after.value)
+        after.value = "";
+    }
+
     // data['guest-count'] = data['mealA'] + data['mealB'] + data['mealC']
     console.log(data);
-    formElts[0].value = "";
-    formElts[3].value = "";
-    formElts[4].value = "";
+    social.value = "";
+    guests.value = "";
+    nameg.value = "";
+
     // formElts[5].value = "";
     // formElts[6].value = "";
 
