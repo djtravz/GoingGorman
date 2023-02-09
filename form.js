@@ -30,6 +30,7 @@ function processForm() {
     var data = {
         'name': nameg.value,
         'attendance': yesNo(document.querySelector("input#yes:checked")),
+        'hilton': yesNo(document.querySelector("input#hilton:checked")),
         'countSocial': parseInt(social.value),
         'countWedding': parseInt(guests.value)
         // 'countBrunch': parseInt(formElts[6].value)
@@ -55,7 +56,7 @@ function processForm() {
     
     var xhr = new XMLHttpRequest();
     xhr.open("POST", 
-    `https://api.telegram.org/bot5361540387:AAEz8tx58mUi0MeSciQqFptLsDZaBr3hpHE/sendMessage?chat_id=-833735643&text=Names: ${data['name']}  |  Coming? ${data['attendance']}  |  Wedding count: ${data['countWedding']}  |  Social Hour: ${data['countSocial']}  |  After party: ${data['countAfter']}`
+    `https://api.telegram.org/bot5361540387:AAEz8tx58mUi0MeSciQqFptLsDZaBr3hpHE/sendMessage?chat_id=-833735643&text=Names: ${data['name']}  |  Coming? ${data['attendance']}  |  Hilton? ${data['hilton']}  |  Wedding count: ${data['countWedding']}  |  Social Hour: ${data['countSocial']}  |  After party: ${data['countAfter']}`
     , true);
     xhr.send();
 
