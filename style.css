@@ -505,6 +505,7 @@ SCHEDULE
     padding: 5px;
     margin:auto;
     color:white;
+    text-align: center;
   }
 
   @media (max-aspect-ratio: 9/16) {
