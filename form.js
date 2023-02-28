@@ -22,6 +22,10 @@ function processForm() {
     // import { getDatabase, ref, set } from "firebase/database";
     formElts = document.querySelectorAll("#rsvp-form")[0];
     nameg = document.querySelector("#name");
+    if (nameg.value == "") {
+        window.alert("Please input the names of your party.");
+        return;
+    }
     social = document.querySelector("#social");
     guests = document.querySelector("#guests");
     try {
