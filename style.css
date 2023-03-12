@@ -9,6 +9,10 @@
     src: url("fonts/Satisfy-Regular.ttf");
 }
 @font-face {
+    font-family: 'old';
+    src: url("fonts/Satisfy-Regular.old.ttf");
+}
+@font-face {
     font-family: 'garamond';
     src: url("fonts/EBGaramond-Regular.ttf") format("opentype");
 }
@@ -55,7 +59,7 @@ h1 {
     font-weight:normal;
     padding-top:1.5em;
     font-family:'satisfy';
-    color:var(--accent);
+    color:black;
     /* text-shadow:#000; */
 }
 h2 {
@@ -112,7 +116,7 @@ NAVIGATION BAR
 
 .unavailable {
     text-decoration:line-through;
-    color: var(--weak-text)
+    color: var(--weak-text);
 }
 
 .nav-bar {
@@ -175,24 +179,24 @@ INTRO
 #intro-d {
     height:100%;
     /* background-color:rgb(169, 189, 169); */
-    background-image:url(images/trio-cover.JPG);
+    /* background-image:url(images/trio-cover.JPG);
     background-size:cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     
     /* display:block; */
-    border-bottom-width: 0px;
-    padding-bottom: 2px; 
+    /* border-bottom-width: 0px;
+    padding-bottom: 2px;  */
     
-    box-shadow: inset 0px 3px 10px 0px rgba(60, 60, 60, 0.60);
-    box-sizing: border-box;
 }
 
 #intro-d img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width:80%
+    width:70%;
+    box-shadow: 0px 3px 10px 0px rgba(60, 60, 60, 0.60);
+    box-sizing: border-box;
     /* width: 50%; */
 }
 
@@ -216,13 +220,13 @@ RSVP FORM
     padding-top:0.5em;
     padding-bottom:0.5em;
 }
-#rsvp-form input {
+#rsvp-form input,textarea {
     text-align:center;
 }
-#formSubmit {
+/* #formSubmit {
     margin-top:1em;
-}
-input {
+} */
+input,textarea {
     font-family:'garamond'
 }
 .center {
@@ -234,11 +238,11 @@ input {
     text-align: center;
 }
 
-input[type=text] {
+input[type=text],textarea {
     padding: 0.5em;
     font-size: 1em;
 }
-input[type=text],input[type=text] {
+input[type=text],textarea {
     /* width:fit-content; */
     /* width:auto */
     border-radius: 5px;
@@ -277,6 +281,7 @@ label {
     padding-left:0.5em;
 }
 
+
 /******************* 
 LOCATION INFO
 ********************/
@@ -311,6 +316,9 @@ div.infobox {
     width:30%;
     background-size:cover;
     background-position:center;
+    color:white;
+}
+.infobox h1 {
     color:white;
 }
 #locations-d ul {
@@ -489,4 +497,30 @@ SCHEDULE
   /* setting dot to the right if the card is odd */
   .card:nth-child(even) > .info > .title::before {
     right: -45px;
+  }
+
+  .registry {
+    background-color:black;
+    width:fit-content;
+    padding: 5px;
+    margin:auto;
+    color:white;
+    text-align: center;
+  }
+
+  @media (max-aspect-ratio: 9/16) {
+    #rsvp-d,.nav-bar,#schedule-d {
+        zoom:2;
+    }
+    #locations-d .centered{
+        width:80%;
+        font-size:2em;
+    }
+    div.infobox {
+        width:70%;
+        font-size:1.5em;
+    }
+    .registry {
+        font-size:1.5em;
+    }
   }
