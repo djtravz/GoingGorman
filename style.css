@@ -348,8 +348,12 @@ SCHEDULE
     padding-top: 0.2em;
     font-size: 2em;
 }
+#schedule-d .party a{
+    color:red;
+}
 #schedule-d a{
-    color:rgb(224, 224, 224);
+    /* color:rgb(224, 224, 224); */
+    color:black;
     text-decoration: underline;
     /* font-family: 'heinig', 'Brotherhood Script', normal; */
     font-style: italic;
@@ -390,6 +394,7 @@ SCHEDULE
     position: relative;
     margin: auto;
     max-width: 400px;
+    z-index: 0;
   }
   
   /* setting padding based on even or odd */
@@ -454,6 +459,7 @@ SCHEDULE
     color: var(--text);
     border-radius: 10px;
     padding: 10px;
+    z-index: 1;
   }
   .info p {
     padding-bottom:0.5em;
@@ -506,6 +512,9 @@ SCHEDULE
     margin:auto;
     color:white;
     text-align: center;
+  }
+  a.info {
+    color: black;
   }
 
   @media (max-aspect-ratio: 9/16) {
